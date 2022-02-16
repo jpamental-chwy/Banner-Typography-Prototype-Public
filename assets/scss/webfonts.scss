@@ -1,0 +1,143 @@
+/* Gordita Static Fonts */
+
+@font-face {
+  font-family: 'Gordita';
+  font-weight: normal;
+  font-style: normal;
+  src: 
+      url('../fonts/gordita/Gordita-regular-subset.woff2') format('woff2'), 
+      url('../fonts/gordita/Gordita-regular-subset.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: normal;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-regular-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-regular-italic-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: bold;
+    font-style: normal;
+    src: 
+        url('../fonts/gordita/Gordita-bold-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-bold-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: bold;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-bold-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-bold-italic-subset.woff') format('woff');
+    font-display: swap;
+}
+
+/* Extra weights & variants */
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 100;
+    font-style: regular;
+    src: 
+        url('../fonts/gordita/Gordita-thin-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita/Gordita-thin-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 100;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-thin-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-thin-italic-subset.woff') format('woff');
+    font-display: swap;
+}
+              
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 200;
+    font-style: regular;
+    src: 
+        url('../fonts/gordita/Gordita-light-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-light-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 200;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-light-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-light-italic-subset.woff') format('woff');
+    font-display: swap;
+}
+              
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 500;
+    font-style: regular;
+    src: 
+        url('../fonts/gordita/Gordita-medium-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-medium-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 500;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-medium-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-medium-italic-subset.woff') format('woff');
+    font-display: swap;
+}
+              
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 800;
+    font-style: regular;
+    src: 
+        url('../fonts/gordita/Gordita-black-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-black-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 800;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-black-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-black-italic-subset.woff') format('woff');
+    font-display: swap;
+}
+              
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 900;
+    font-style: regular;
+    src: 
+        url('../fonts/gordita/Gordita-ultra-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-ultra-subset.woff') format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    font-weight: 900;
+    font-style: italic;
+    src: 
+        url('../fonts/gordita/Gordita-ultra-italic-subset.woff2') format('woff2'), 
+        url('../fonts/gordita/Gordita-ultra-italic-subset.woff') format('woff');
+    font-display: swap;
+}

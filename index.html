@@ -1,0 +1,142 @@
+<html>
+<head>
+  <link rel="stylesheet" href="assets/css/webfonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="sg-header" role="banner">
+	<div class="nav url-change">
+	
+	</div>
+	<div class="sg-controls" id="sg-controls">
+		<div class="sg-control-content">
+			<ul class="sg-control">
+				<li class="sg-size">
+					<div class="sg-current-size">
+						<form id="sg-form">
+							Size <input type="text" class="sg-input sg-size-px" value="320">px / 
+							<input type="text" class="sg-input sg-size-em" value="20">em
+						</form><!--end #sg-form-->
+					</div><!--end #sg-current-size-->
+					<ul class="sg-acc-panel sg-size-options">
+						<li class="sg-quarter"><a href="#" id="sg-size-s">S</a></li> 
+						<li class="sg-quarter"><a href="#" id="sg-size-m">M</a></li>
+						<li class="sg-quarter"><a href="#" id="sg-size-l">L</a></li>
+						<li class="sg-half"><a href="#" id="sg-size-full">Full</a></li>
+						<li class="sg-half"><a href="#" id="sg-size-random">Random</a></li>
+						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-disco">Disco</a></li>
+						<li class="sg-half"><a href="#" class="mode-link" id="sg-size-hay">Hay!</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+
+<!-- Iframe -->
+<div id="sg-vp-wrap" class="component-area">
+	<div id="sg-cover"></div>
+	<div id="sg-gen-container">
+		<iframe id="sg-viewport" class="viewport" src="component.html">
+		</iframe>
+		<div id="sg-rightpull-container">
+			<div id="sg-rightpull"></div>
+		</div>
+	</div>
+</div>
+<!--end iFrame-->
+<form class="control-area">
+  <div class="controls">
+    <h2>Text Block Alignment</h2>
+    <div class="block-align">
+      <label>Text Block Placement</label>
+      <ul class="block-align--options">
+        <li><input type="radio" id="block_align_left" class="block_align_options" name="block_align_options" value="left"><label for="block_align_left">Left</label></li>
+        <li><input type="radio" id="block_align_center" class="block_align_options" name="block_align_options" value="center" checked><label for="block_align_center">Center</label></li>
+        <li><input type="radio" id="block_align_right" class="block_align_options" name="block_align_options" value="right"><label for="block_align_right">Right</label></li>
+      </ul>
+    </div>
+    <div class="text-align">
+      <label>Text Alignment</label>
+      <ul class="text-align--options">
+        <li><input type="radio" id="text_align_left" name="text_align_options" value="left"><label for="text_align_left">Left</label></li>
+        <li><input type="radio" id="text_align_center" name="text_align_options" value="center" checked><label for="text_align_center">Center</label></li>
+        <li><input type="radio" id="text_align_right" name="text_align_options" value="right"><label for="text_align_right">Right</label></li>
+      </ul>
+    </div>
+    <div class="text-valign">
+      <label>Vertical Alignment</label>
+      <ul class="text-valign--options">
+        <li><input type="radio" id="text_valign_top" name="text_valign_options" value="top"><label for="text_valign_top">Top</label></li>
+        <li><input type="radio" id="text_valign_middle" name="text_valign_options" value="center"><label for="text_valign_middle">Middle</label></li>
+        <li><input type="radio" id="text_valign_bottom" name="text_valign_options" value="bottom" checked><label for="text_valign_bottom">Bottom</label></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-lines--top">
+    <h2>Top Line</h2>
+    <div class="text-lines--top--styles">
+      <input type="checkbox" id="display-line--top" class="display-line__top" name="display_top_line" value="display" checked><label for="display_top_line">Display Top Line</label>
+    </div>
+    <div class="text-lines--top--styles">
+      <label>Text Style</label>
+      <select class="text-styles--top">
+        <option value="level-7">Level 7 (largest)</option>
+        <option value="level-6">Level 6</option>
+        <option value="level-5">Level 5</option>
+        <option value="level-4">Level 4</option>
+        <option value="level-3">Level 3</option>
+        <option value="level-2" selected>Level 2</option>
+        <option value="level-1">Level 1 (smallest)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-lines--main">
+    <h2>Main Line </h2>
+    <div class="text-lines--main--styles">
+      <input type="checkbox" id="display-line--main" class="display-line__main" name="display_main_line" value="display" checked><label for="display_main_line">Display Main Line</label>
+    </div>
+    <div class="text-lines--main--styles">
+      <label>Text Style</label>
+      <select class="text-styles--main">
+        <option value="level-7" selected>Level 7 (largest)</option>
+        <option value="level-6">Level 6</option>
+        <option value="level-5">Level 5</option>
+        <option value="level-4">Level 4</option>
+        <option value="level-3">Level 3</option>
+        <option value="level-2">Level 2</option>
+        <option value="level-1">Level 1 (smallest)</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="text-lines--bottom">
+    <h2>Bottom Line Styles</h2>
+    <div class="text-lines--bottom--styles">
+      <input type="checkbox" id="display-line--bottom" class="display-line__bottom" name="display_bottom_line" value="display" checked><label for="display_main_line">Display Bottom Line</label>
+    </div>
+    <div class="text-lines--bottom--styles">
+      <label>Text Style</label>
+      <select class="text-styles--bottom">
+        <option value="level-2">Level 2</option>
+        <option value="level-1" selected>Level 1 (smallest)</option>
+      </select>
+    </div>
+  </div>
+  </div>
+
+  <div class="text-lines--ctas">
+    <h2>Buttons</h2>
+    <div class="text-lines--cta--styles">
+      <input type="checkbox" id="display-line--bottom" class="display-line__cta" name="display_cta_line" value="display" checked><label for="display_cta_line">Display Buttons</label>
+    </div>
+  </div>
+</form>
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+</html>
