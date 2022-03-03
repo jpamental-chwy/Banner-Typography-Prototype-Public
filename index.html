@@ -82,14 +82,19 @@
     <div class="text-lines--top--styles">
       <label>Text Style</label>
       <select class="text-styles--top">
-        <option value="level-7">Level 7 (largest)</option>
+        <option value="level-7" selected>Level 7 (largest)</option>
+        <option value="level-7-bold" selected>Level 7 Bold</option>
         <option value="level-6">Level 6</option>
+        <option value="level-6-bold">Level 6 Bold</option>
         <option value="level-5">Level 5</option>
         <option value="level-4">Level 4</option>
         <option value="level-3">Level 3</option>
         <option value="level-2" selected>Level 2</option>
         <option value="level-1">Level 1 (smallest)</option>
       </select>
+    </div>
+    <div class="text-lines--top--content">
+      <textarea id="textContentTop" disabled class="text-lines--input text-lines--input--top">Top Line Text</textarea>
     </div>
   </div>
 
@@ -102,13 +107,18 @@
       <label>Text Style</label>
       <select class="text-styles--main">
         <option value="level-7" selected>Level 7 (largest)</option>
+        <option value="level-7-bold" selected>Level 7 Bold</option>
         <option value="level-6">Level 6</option>
+        <option value="level-6-bold">Level 6 Bold</option>
         <option value="level-5">Level 5</option>
         <option value="level-4">Level 4</option>
         <option value="level-3">Level 3</option>
         <option value="level-2">Level 2</option>
         <option value="level-1">Level 1 (smallest)</option>
       </select>
+    </div>
+    <div class="text-lines--main--content">
+      <textarea id="textContentMain" disabled class="text-lines--input text-lines--input--main">Some text in the resizer thing</textarea>
     </div>
   </div>
 
@@ -124,19 +134,78 @@
         <option value="level-1" selected>Level 1 (smallest)</option>
       </select>
     </div>
-  </div>
+    <div class="text-lines--bottom--content">
+      <textarea id="textContentBottom" disabled class="text-lines--input text-lines--input--bottom">Bottom Line Text</textarea>
+    </div>
   </div>
 
   <div class="text-lines--ctas">
     <h2>Buttons</h2>
     <div class="text-lines--cta--styles">
-      <input type="checkbox" id="display-line--bottom" class="display-line__cta" name="display_cta_line" value="display" checked><label for="display_cta_line">Display Buttons</label>
+      <div>
+        <input type="checkbox" id="display-line--button1" class="display-line__button1" name="display_cta_button1" value="display" checked><label for="display_cta_button1">Display Button 1</label>
+      </div>
+      <div>
+        <label class="text-field-label">Button 1 Destination</label>
+        <input type="text" name="button1_destination" />
+      </div>
+      <div>
+        <input type="checkbox" id="display-line--button2" class="display-line__button2" name="display_cta_button2" value="display" checked><label for="display_cta_button2">Display Button 2</label>
+      </div>
+      <div>
+        <label class="text-field-label">Button 2 Destination</label>
+        <input type="text" name="button2_destination" />
+      </div>
     </div>
   </div>
 </form>
  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="assets/js/vendor/ckeditor.js"></script>
 <script src="assets/js/script.js"></script>
 
+<script>
+  var viewport = document.getElementById('sg-viewport');
+
+  BalloonEditor
+    .create( viewport.contentWindow.document.querySelector('.text-top-line'), {
+      licenseKey: '',
+    } )
+    .then( editor => {
+      window.editor = editor;
+    } )
+    .catch( error => {
+      console.error( 'Oops, something went wrong!' );
+      console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+      console.warn( 'Build id: qbt7xe81aa1e-qr4tiugo3ojk' );
+      console.error( error );
+    } );
+    BalloonEditor
+    .create( viewport.contentWindow.document.querySelector('.text-main-line'), {
+      licenseKey: '',
+    } )
+    .then( editor => {
+      window.editor = editor;
+    } )
+    .catch( error => {
+      console.error( 'Oops, something went wrong!' );
+      console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+      console.warn( 'Build id: qbt7xe81aa1e-qr4tiugo3ojk' );
+      console.error( error );
+    } );
+    BalloonEditor
+    .create( viewport.contentWindow.document.querySelector('.text-bottom-line'), {
+      licenseKey: '',
+    } )
+    .then( editor => {
+      window.editor = editor;
+    } )
+    .catch( error => {
+      console.error( 'Oops, something went wrong!' );
+      console.error( 'Please, report the following error on https://github.com/ckeditor/ckeditor5/issues with the build id and the error stack trace:' );
+      console.warn( 'Build id: qbt7xe81aa1e-qr4tiugo3ojk' );
+      console.error( error );
+    } );
+</script>
 </body>
 </html>

@@ -9,7 +9,8 @@ const text_style_bottom = document.querySelector('.text-styles--bottom');
 const text_style_top_display = document.querySelector('.display-line__top');
 const text_style_main_display = document.querySelector('.display-line__main');
 const text_style_bottom_display = document.querySelector('.display-line__bottom');
-const text_style_cta_display = document.querySelector('.display-line__cta');
+const text_style_button1_display = document.querySelector('.display-line__button1');
+const text_style_button2_display = document.querySelector('.display-line__button2');
 
 var selected_style_top = '';
 var selected_style_main = '';
@@ -42,7 +43,8 @@ text_style_bottom.addEventListener('change', (event) => {
 text_style_top_display.addEventListener('change', handleDisplayTopUpdate);
 text_style_main_display.addEventListener('change', handleDisplayMainUpdate);
 text_style_bottom_display.addEventListener('change', handleDisplayBottomUpdate);
-text_style_cta_display.addEventListener('change', handleDisplayCtaUpdate);
+text_style_button1_display.addEventListener('change', handleDisplayCtaUpdate1);
+text_style_button2_display.addEventListener('change', handleDisplayCtaUpdate2);
 
 function handleUpdate(e) {
   document.querySelector(':root').style.setProperty(`--${this.id}`, this.value);
@@ -82,14 +84,21 @@ function handleDisplayBottomUpdate(e) {
   };
 }
 
-function handleDisplayCtaUpdate(e) {
-  document.querySelector(':root').style.setProperty(`--text-line-cta-display`, this.checked);
+function handleDisplayCtaUpdate1(e) {
   var viewport = document.getElementById('sg-viewport');
-  viewport.contentWindow.document.querySelector(':root').style.setProperty(`--text-line-cta-display`, this.checked);
   if (this.checked == true) {
-    viewport.contentWindow.document.querySelector('.ctas').classList.remove('hidden');
+    viewport.contentWindow.document.querySelector('[name="submit1"]').classList.remove('hidden');
   } else if (this.checked == false) {
-    viewport.contentWindow.document.querySelector('.ctas').classList.add('hidden');
+    viewport.contentWindow.document.querySelector('[name="submit1"]').classList.add('hidden');
+  };
+}
+
+function handleDisplayCtaUpdate2(e) {
+  var viewport = document.getElementById('sg-viewport');
+  if (this.checked == true) {
+    viewport.contentWindow.document.querySelector('[name="submit2"]').classList.remove('hidden');
+  } else if (this.checked == false) {
+    viewport.contentWindow.document.querySelector('[name="submit2"]').classList.add('hidden');
   };
 }
 
@@ -163,25 +172,53 @@ function handleTextStyleTopUpdate(e) {
   var viewport = document.getElementById('sg-viewport');
   if (selected_style_top == 'level-7') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-2');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-1');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-7');
+  } else if (selected_style_top == 'level-7-bold') {
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-2');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-1');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-7-bold');
   } else if (selected_style_top == 'level-6') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-2');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-1');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-6');
+  } else if (selected_style_top == 'level-6-bold') {
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-2');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-1');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-6-bold');
   } else if (selected_style_top == 'level-5') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
@@ -190,7 +227,9 @@ function handleTextStyleTopUpdate(e) {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-5');
   } else if (selected_style_top == 'level-4') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
@@ -199,7 +238,9 @@ function handleTextStyleTopUpdate(e) {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-4');
   } else if (selected_style_top == 'level-3') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
@@ -208,7 +249,9 @@ function handleTextStyleTopUpdate(e) {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-3');
   } else if (selected_style_top == 'level-2') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
@@ -217,7 +260,9 @@ function handleTextStyleTopUpdate(e) {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.add('level-2');
   } else if (selected_style_top == 'level-1') {
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-top-line').classList.remove('level-3');
@@ -231,22 +276,48 @@ function handleTextStyleMainUpdate(e) {
   var viewport = document.getElementById('sg-viewport');
   if (selected_style_main == 'level-7') {
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-3');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-2');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-1');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.add('level-7');
+  } else if (selected_style_main == 'level-7-bold') {
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7-bold');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6-bold');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-5');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-4');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-3');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-2');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-1');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.add('level-7-bold');
   } else if (selected_style_main == 'level-6') {
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7-bold');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6-bold');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-5');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-4');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-3');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-2');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-1');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.add('level-6');
+  } else if (selected_style_main == 'level-6-bold') {
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7-bold');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6-bold');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-5');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-4');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-3');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-2');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-1');
+    viewport.contentWindow.document.querySelector('.text-main-line').classList.add('level-6-bold');
   } else if (selected_style_main == 'level-5') {
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-7');
     viewport.contentWindow.document.querySelector('.text-main-line').classList.remove('level-6');
@@ -318,6 +389,44 @@ function handleTextStyleBottomUpdate(e) {
   };
 }
 
+/* Content Editing */
+
+var viewport = document.getElementById('sg-viewport');
+var contentTopLine = viewport.contentWindow.document.querySelector('.text-top-line');
+var textareaContentTopLine = document.querySelector('.text-lines--input--top');
+var htmlCodeTopLine = textareaContentTopLine.value;
+var contentMainLine = viewport.contentWindow.document.querySelector('.text-main-line');
+var textareaContentMainLine = document.querySelector('.text-lines--input--main');
+var htmlCodeMainLine = textareaContentMainLine.value;
+var contentBottomLine = viewport.contentWindow.document.querySelector('.text-bottom-line');
+var textareaContentBottomLine = document.querySelector('.text-lines--input--bottom');
+var htmlCodeBottomLine = textareaContentBottomLine.value;
+
+function fillCode() {
+	textareaContentTopLine.value = contentTopLine.innerHTML;
+	textareaContentMainLine.value = contentMainLine.innerHTML;
+	textareaContentBottomLine.value = contentBottomLine.innerHTML;
+}
+
+contentTopLine.addEventListener('input', fillCode);
+contentMainLine.addEventListener('input', fillCode);
+contentBottomLine.addEventListener('input', fillCode);
+window.addEventListener('load', fillCode);
+
+/*
+
+  reset.addEventListener('click', function () {
+    textareaHTML1.value = htmlCode1;
+    textareaCSS1.value = cssCode1;
+    textareaHTML2.value = htmlCode2;
+    textareaCSS2.value = cssCode2;
+    textareaHTML3.value = htmlCode3;
+    textareaCSS3.value = cssCode3;
+    fillCode();
+  });
+
+
+*/
 
 
 

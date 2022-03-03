@@ -122,7 +122,7 @@ button {
   margin-top: 0.5rem;
 }
 
-.ctas {
+.ctas > * {
   margin-top: 0.75rem;
 }
 
@@ -133,6 +133,11 @@ button {
 }
 [contenteditable=true].hidden {
   display: none;
+}
+
+.ck-content p {
+  margin: 0;
+  padding: 0;
 }
 
 .hidden {
@@ -155,6 +160,15 @@ button {
 .level-7 .black {
   font-weight: 900;
 }
+.level-7-bold {
+  font-size: clamp(1.75rem, 3vw + 1rem, 3.75rem);
+  line-height: 1.01;
+  font-weight: bold;
+}
+.level-7-bold b,
+.level-7-bold strong {
+  font-weight: 900;
+}
 
 .level-6 {
   font-weight: normal;
@@ -169,6 +183,16 @@ button {
 }
 .level-6.black,
 .level-6 .black {
+  font-weight: 900;
+}
+.level-6-bold {
+  font-weight: normal;
+  font-size: clamp(1.667rem, 2.5vw + 1rem, 3rem);
+  line-height: 1.1;
+  font-weight: bold;
+}
+.level-6-bold b,
+.level-6-bold strong {
   font-weight: 900;
 }
 
@@ -250,5 +274,54 @@ button {
 .level-1.black,
 .level-1 .black {
   font-weight: 600;
+}
+
+:root {
+  --ck-sample-base-spacing: 2em;
+  --ck-sample-color-white: #fff;
+  --ck-sample-color-green: #279863;
+  --ck-sample-color-blue: #1a9aef;
+  --ck-sample-container-width: 1285px;
+  --ck-sample-sidebar-width: 350px;
+  --ck-sample-editor-min-height: 400px;
+  --ck-sample-editor-z-index: 10;
+}
+
+/* --------- EDITOR STYLES  ---------------------------------------------------------------------------------------- */
+.editor__editable,
+main .ck-editor[role=application] .ck.ck-content,
+.ck.editor__editable[role=textbox],
+.ck.ck-editor__editable[role=textbox],
+.ck.editor[role=textbox] {
+  width: 100%;
+  padding: 0;
+}
+
+main .ck-editor[role=application] {
+  overflow: auto;
+}
+
+.ck-rounded-corners .ck.ck-balloon-panel,
+.ck.ck-balloon-panel.ck-rounded-corners {
+  margin-top: 2rem !important;
+}
+
+.ck.ck-editor__editable {
+  width: 100%;
+}
+
+/* Because of sidebar `position: relative`, Edge is overriding the outline of a focused editor. */
+.ck.ck-editor__editable {
+  position: relative;
+  z-index: var(--ck-sample-editor-z-index);
+}
+
+.editor-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: relative;
+  width: 100%;
+  justify-content: center;
 }
 /*# sourceMappingURL=component-style.css.map */

@@ -23,6 +23,20 @@
   margin-top: 1rem;
 }
 
+.ck-rounded-corners .ck.ck-balloon-panel,
+.ck.ck-balloon-panel {
+  margin-top: 2rem;
+}
+
+.text-field-label {
+  display: block;
+}
+
+.text-lines--input {
+  width: 100%;
+  height: 6rem;
+}
+
 .component-area {
   background-color: #fdfdfd;
   box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
