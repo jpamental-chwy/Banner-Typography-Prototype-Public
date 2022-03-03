@@ -98,4 +98,62 @@
   src: url("../fonts/gordita/Gordita-ultra-italic-subset.woff2") format("woff2"), url("../fonts/gordita/Gordita-ultra-italic-subset.woff") format("woff");
   font-display: swap;
 }
+/* Work Sans Static Fonts */
+@font-face {
+  font-family: "Work Sans";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/work-sans/WorkSans-Regular-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-Regular-subset.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/work-sans/WorkSans-Italic-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-Italic-subset.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/work-sans/WorkSans-Bold-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-Bold-subset.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Work Sans";
+  font-weight: bold;
+  font-style: italic;
+  src: url("../fonts/work-sans/WorkSans-BoldItalic-subset.woff2") format("woff2"), url("../fonts/work-sans/WorkSans-BoldItalic-subset.woff") format("woff");
+  font-display: swap;
+}
+/* Poppins Static Fonts */
+@font-face {
+  font-family: "Poppins";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/poppins/Poppins-Regular-subset.woff2") format("woff2"), url("../fonts/poppins/Poppins-Regular-subset.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/poppins/Poppins-Bold-subset.woff2") format("woff2"), url("../fonts/poppins/Poppins-Bold-subset.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/poppins/Poppins-Medium-subset.woff2") format("woff2"), url("../fonts/poppins/Poppins-Medium-subset.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/poppins/Poppins-SemiBold-subset.woff2") format("woff2"), url("../fonts/poppins/Poppins-SemiBold-subset.woff") format("woff");
+  font-display: swap;
+}
 /*# sourceMappingURL=webfonts.css.map */
