@@ -8,7 +8,7 @@ You should be able to get this up and running with `npm install`.
 
 ## Running the Project
 
-This project uses the Gulp task runner to build the project, compile the SCSS, and run a local server.
+This project uses the Gulp task runner to build the project, compile the SCSS, and run a local server. The default `gulp` command will execute these actions.
 
 ## GitHub Pages URL
 
