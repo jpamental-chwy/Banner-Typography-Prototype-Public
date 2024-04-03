@@ -23,6 +23,10 @@
   margin-top: 1rem;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .ck-rounded-corners .ck.ck-balloon-panel,
 .ck.ck-balloon-panel {
   margin-top: 2rem;
@@ -232,7 +236,6 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
   }
-
   .sg-quarter:first-child {
     border-left: 0;
   }
@@ -244,7 +247,6 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
   }
-
   .sg-half:nth-child(odd) {
     border-left: 0;
   }
@@ -275,7 +277,6 @@ body {
     max-height: none;
     max-width: none;
   }
-
   .sg-size-options > li {
     float: left;
     border: 0;
