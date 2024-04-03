@@ -7,6 +7,8 @@
   --font-stack-sans-legacy-heading: 'Poppins', var(--font-family-sans-fallback);
   --font-stack-sans-legacy-body: 'Work Sans', var(--font-family-sans-fallback);
   
+  --text-color: #ffffff;
+
   --brand-blue: #1c49c2;
 }
 
@@ -152,6 +154,12 @@ button {
 }
 
 /* Text styles */
+.text-cta-container {
+  > div {
+    color: var(--text-color);
+  }
+}
+
 .level-7 {
   font-weight: normal;
   font-size: clamp(1.75rem, calc(3vw + 1rem), 3.75rem);

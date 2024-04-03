@@ -13,6 +13,9 @@
   --text-valignment: center;
 }
 
+body {
+  background-color: #ffffff55;
+}
 .control-area {
   display: flex;
   margin-top: calc( var(--component-height) + var(--top-offset) );
@@ -31,6 +34,19 @@
   opacity: 0;
 }
 
+.controls {
+  ul {
+    display: flex;
+    margin: 0.5rem 0 0 0;
+    padding: 0;
+  li {
+      display: flex;
+      & + li {
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}
 .ck-rounded-corners .ck.ck-balloon-panel, 
 .ck.ck-balloon-panel {
   margin-top: 2rem;
@@ -57,7 +73,6 @@
   
   /* 'ish' styles */
   body {
-    background-color: #ffffff;
     font-family: var(--font-stack-sans);
 
   }

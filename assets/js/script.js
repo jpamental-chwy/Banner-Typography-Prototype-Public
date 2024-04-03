@@ -10,7 +10,6 @@ const text_style_top_display = document.querySelector('.display-line__top');
 const text_style_main_display = document.querySelector('.display-line__main');
 const text_style_bottom_display = document.querySelector('.display-line__bottom');
 const text_style_button1_display = document.querySelector('.display-line__button1');
-const text_style_button2_display = document.querySelector('.display-line__button2');
 
 var selected_style_top = '';
 var selected_style_main = '';
@@ -44,7 +43,6 @@ text_style_top_display.addEventListener('change', handleDisplayTopUpdate);
 text_style_main_display.addEventListener('change', handleDisplayMainUpdate);
 text_style_bottom_display.addEventListener('change', handleDisplayBottomUpdate);
 text_style_button1_display.addEventListener('change', handleDisplayCtaUpdate1);
-text_style_button2_display.addEventListener('change', handleDisplayCtaUpdate2);
 
 function handleUpdate(e) {
   document.querySelector(':root').style.setProperty(`--${this.id}`, this.value);
@@ -90,15 +88,6 @@ function handleDisplayCtaUpdate1(e) {
     viewport.contentWindow.document.querySelector('[name="submit1"]').classList.remove('hidden');
   } else if (this.checked == false) {
     viewport.contentWindow.document.querySelector('[name="submit1"]').classList.add('hidden');
-  };
-}
-
-function handleDisplayCtaUpdate2(e) {
-  var viewport = document.getElementById('sg-viewport');
-  if (this.checked == true) {
-    viewport.contentWindow.document.querySelector('[name="submit2"]').classList.remove('hidden');
-  } else if (this.checked == false) {
-    viewport.contentWindow.document.querySelector('[name="submit2"]').classList.add('hidden');
   };
 }
 
