@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #ffffff55;
+  background-color: rgba(255, 255, 255, 0.3333333333);
 }
 
 .control-area {
@@ -251,7 +251,6 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
   }
-
   .sg-quarter:first-child {
     border-left: 0;
   }
@@ -263,7 +262,6 @@ body {
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     text-align: center;
   }
-
   .sg-half:nth-child(odd) {
     border-left: 0;
   }
@@ -294,7 +292,6 @@ body {
     max-height: none;
     max-width: none;
   }
-
   .sg-size-options > li {
     float: left;
     border: 0;
